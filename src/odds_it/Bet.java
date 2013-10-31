@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-////// ECCOLOOOOOOOOo
+////// yyyyyyyyy
 /**
  * <p>Java class for anonymous complex type.
  * 
