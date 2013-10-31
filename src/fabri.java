@@ -1,4 +1,7 @@
 
 public class fabri {
-ciao!
+//ciao!
+	public void stampa(){
+	System.out.println("Ciao!");
 }
+	}
