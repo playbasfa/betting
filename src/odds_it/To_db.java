@@ -27,8 +27,14 @@ public class To_db
     public static void main(String args[]) throws ClassNotFoundException, InstantiationException, IllegalAccessException, MalformedURLException, JAXBException, IOException, InterruptedException, NoSuchMethodException, IllegalArgumentException, InvocationTargetException, SQLException
       {
         To_db obj = new To_db();
+        obj.takeDate();
         obj.todb(obj.objectize("../betting/src/files_xml/odds_it.xml"));
       }
+    private String takeDate(){
+    	File f = new File(name);
+    	return date;
+    }
+    
     private void todb(Sports obj) throws SQLException
     {
     	conn = openConn();  	
