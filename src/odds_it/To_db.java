@@ -174,7 +174,7 @@ public class To_db
         }
     }
     private void toMatch(String i_match,String n_match,String sd_match,String l_match,String st_match,String i_event){
-    	String query="INSERT INTO" + " EVENTS"+ " VALUES(?,?,?,?,?,?)";
+    	String query="INSERT INTO" + " MATCHES"+ " VALUES(?,?,?,?,?,?)";
         try{
     	statement = conn.prepareStatement(query);
         statement.setString(1, n_match);
