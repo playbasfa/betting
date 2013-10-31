@@ -39,7 +39,6 @@ public class To_db
     
     private void todb(Sports obj) throws SQLException
     {
-    	//System.out.println("ECCO"+obj.getFileDate());
     	conn = openConn();  	
     	String i_sport=null;
     	String n_sport=null;
