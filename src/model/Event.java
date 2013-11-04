@@ -1,5 +1,5 @@
 
-package odds_it;
+package model;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{}event" maxOccurs="unbounded"/>
+ *         &lt;element ref="{}match" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *       &lt;attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
  *       &lt;attribute name="name" use="required" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
@@ -36,13 +36,13 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "event"
+    "match"
 })
-@XmlRootElement(name = "sport")
-public class Sport {
+@XmlRootElement(name = "event")
+public class Event {
 
     @XmlElement(required = true)
-    protected List<Event> event;
+    protected List<Match> match;
     @XmlAttribute(required = true)
     protected BigInteger id;
     @XmlAttribute(required = true)
@@ -50,32 +50,32 @@ public class Sport {
     protected String name;
 
     /**
-     * Gets the value of the event property.
+     * Gets the value of the match property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the event property.
+     * This is why there is not a <CODE>set</CODE> method for the match property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getEvent().add(newItem);
+     *    getMatch().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Event }
+     * {@link Match }
      * 
      * 
      */
-    public List<Event> getEvent() {
-        if (event == null) {
-            event = new ArrayList<Event>();
+    public List<Match> getMatch() {
+        if (match == null) {
+            match = new ArrayList<Match>();
         }
-        return this.event;
+        return this.match;
     }
 
     /**

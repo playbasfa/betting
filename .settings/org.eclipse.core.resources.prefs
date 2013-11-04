@@ -1,2 +1,8 @@
 eclipse.preferences.version=1
-encoding//src/odds_it/To_db.java=UTF-8
+encoding//src/control/manageBets.java=UTF-8
+encoding//src/control/manageChoices.java=UTF-8
+encoding//src/control/manageEvents.java=UTF-8
+encoding//src/control/manageMatches.java=UTF-8
+encoding//src/control/manageResults.java=UTF-8
+encoding//src/control/manageSports.java=UTF-8
+encoding//src/control/manager.java=UTF-8

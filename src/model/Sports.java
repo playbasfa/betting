@@ -1,5 +1,5 @@
 
-package odds_it;
+package model;
 
 import java.util.ArrayList;
 import java.util.List;

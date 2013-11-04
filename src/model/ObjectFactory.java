@@ -1,5 +1,5 @@
 
-package odds_it;
+package model;
 
 import javax.xml.bind.annotation.XmlRegistry;
 

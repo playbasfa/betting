@@ -1,5 +1,5 @@
 
-package odds_it;
+package model;
 
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;

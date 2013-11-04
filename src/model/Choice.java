@@ -1,13 +1,11 @@
 
-package odds_it;
+package model;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
@@ -22,11 +20,9 @@ import javax.xml.bind.annotation.XmlType;
  * &lt;complexType>
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{}match" maxOccurs="unbounded"/>
- *       &lt;/sequence>
  *       &lt;attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}integer" />
  *       &lt;attribute name="name" use="required" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *       &lt;attribute name="odd" use="required" type="{http://www.w3.org/2001/XMLSchema}decimal" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -35,48 +31,17 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "match"
-})
-@XmlRootElement(name = "event")
-public class Event {
+@XmlType(name = "")
+@XmlRootElement(name = "choice")
+public class Choice {
 
-    @XmlElement(required = true)
-    protected List<Match> match;
     @XmlAttribute(required = true)
     protected BigInteger id;
     @XmlAttribute(required = true)
     @XmlSchemaType(name = "anySimpleType")
     protected String name;
-
-    /**
-     * Gets the value of the match property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the match property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getMatch().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Match }
-     * 
-     * 
-     */
-    public List<Match> getMatch() {
-        if (match == null) {
-            match = new ArrayList<Match>();
-        }
-        return this.match;
-    }
+    @XmlAttribute(required = true)
+    protected BigDecimal odd;
 
     /**
      * Gets the value of the id property.
@@ -124,6 +89,30 @@ public class Event {
      */
     public void setName(String value) {
         this.name = value;
+    }
+
+    /**
+     * Gets the value of the odd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
+     */
+    public BigDecimal getOdd() {
+        return odd;
+    }
+
+    /**
+     * Sets the value of the odd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
+     */
+    public void setOdd(BigDecimal value) {
+        this.odd = value;
     }
 
 }
